@@ -1,0 +1,117 @@
+# =============================================================================
+# Root .gitattributes: LF-ONLY line endings for the whole repository.
+#
+# Rules apply recursively to every app in apps/* and package in packages/*.
+# Attributes override each developer's core.autocrlf setting, so behavior is
+# identical on Windows, macOS, and Linux.
+# =============================================================================
+
+# Baseline: auto-detect text files and normalize them to LF, both in the
+# repository and in the working tree.
+* text=auto eol=lf
+
+# -----------------------------------------------------------------------------
+# Known text files: always text, always LF
+# -----------------------------------------------------------------------------
+# JavaScript / TypeScript
+*.js      text eol=lf
+*.cjs     text eol=lf
+*.mjs     text eol=lf
+*.jsx     text eol=lf
+*.ts      text eol=lf
+*.cts     text eol=lf
+*.mts     text eol=lf
+*.tsx     text eol=lf
+
+# Data and configuration
+*.json    text eol=lf
+*.jsonc   text eol=lf
+*.json5   text eol=lf
+*.yml     text eol=lf
+*.yaml    text eol=lf
+*.toml    text eol=lf
+*.xml     text eol=lf
+*.graphql text eol=lf
+*.gql     text eol=lf
+
+# Styles and markup
+*.css     text eol=lf
+*.scss    text eol=lf
+*.sass    text eol=lf
+*.less    text eol=lf
+*.html    text eol=lf
+*.htm     text eol=lf
+*.svg     text eol=lf
+
+# Documentation
+*.md      text eol=lf
+*.mdx     text eol=lf
+*.txt     text eol=lf
+LICENSE   text eol=lf
+
+# Shell scripts
+*.sh      text eol=lf
+*.bash    text eol=lf
+*.zsh     text eol=lf
+
+# Dotfiles and tooling config
+.env            text eol=lf
+.env.*          text eol=lf
+.editorconfig   text eol=lf
+.gitignore      text eol=lf
+.gitattributes  text eol=lf
+.npmrc          text eol=lf
+.nvmrc          text eol=lf
+.prettierrc     text eol=lf
+.eslintrc       text eol=lf
+Dockerfile      text eol=lf
+
+# -----------------------------------------------------------------------------
+# Binary files: never convert or diff, and keep them byte-for-byte
+# ("binary" is shorthand for "-text -diff -merge")
+# -----------------------------------------------------------------------------
+# Images
+*.png     binary
+*.jpg     binary
+*.jpeg    binary
+*.gif     binary
+*.webp    binary
+*.avif    binary
+*.ico     binary
+*.bmp     binary
+*.tiff    binary
+
+# Fonts
+*.woff    binary
+*.woff2   binary
+*.ttf     binary
+*.otf     binary
+*.eot     binary
+
+# Audio / video
+*.mp3     binary
+*.mp4     binary
+*.webm    binary
+*.ogg     binary
+*.wav     binary
+*.mov     binary
+
+# Archives and documents
+*.zip     binary
+*.gz      binary
+*.tgz     binary
+*.tar     binary
+*.7z      binary
+*.rar     binary
+*.pdf     binary
+
+# Compiled / native
+*.wasm    binary
+*.node    binary
+*.exe     binary
+*.dll     binary
+*.so      binary
+*.dylib   binary
+
+# Bun binary lockfile
+*.lockb   binary

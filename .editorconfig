@@ -1,0 +1,20 @@
+# EditorConfig: https://editorconfig.org
+# Root config for the whole repository (all apps and packages inherit it).
+root = true
+
+# Defaults for every file: JS, TS, JSX, TSX, JSON, CSS, YAML, HTML, ...
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Markdown: two trailing spaces create a hard line break, so keep them
+[*.{md,mdx}]
+trim_trailing_whitespace = false
+
+# Makefiles require tabs
+[Makefile]
+indent_style = tab
